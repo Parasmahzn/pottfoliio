@@ -13,6 +13,25 @@
     color-scheme: dark;
 }
 
+.bg-primary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(5 8 22 / var(--tw-bg-opacity))
+}
+
+.bg-secondary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(170 166 195 / var(--tw-bg-opacity))
+}
+
+.bg-tertiary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(21 16 48 / var(--tw-bg-opacity))
+}
+
+.bg-transparent {
+    background-color: transparent
+}
+
 .bg-hero-pattern {
     background-image: url(/assets/herobg.png)
 }
