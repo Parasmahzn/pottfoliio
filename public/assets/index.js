@@ -26,9 +26,9 @@ import deerhold from "./company/deerhold.png";
 import freelancer from './company/freelancer.png';
 import infodeveloper from "./company/infodeveloper.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import mango from "./mango.png";
+import tangy from "./tangy.png";
+import facedetection from "./facedetection.png";
 
 export {
   logo,
@@ -56,7 +56,7 @@ export {
   dghub,
   freelancer,
   infodeveloper,
-  carrent,
-  jobit,
-  tripguide,
+  mango,
+  tangy,
+  facedetection,
 };

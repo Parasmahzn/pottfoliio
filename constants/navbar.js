@@ -19,10 +19,9 @@ import {
     dghub,
     freelancer,
     infodeveloper,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    mango,
+    tangy,
+    facedetection,
     threejs,
 } from "@public/assets";
 
@@ -205,67 +204,67 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Mango Restaurant",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Web-based platform that allows users to search, order, and manage foods from various providers, providing a convenient and efficient solution for restaurant.",
         tags: [
             {
-                name: "react",
+                name: ".net mvc",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "sql server",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "rest api",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: mango,
+        source_code_link: "https://github.com/Parasmahzn/MangoRestaurant",
     },
     {
-        name: "Job IT",
+        name: "Tangy",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
             {
-                name: "react",
+                name: ".net",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "blazor",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "sql server",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: tangy,
+        source_code_link: "https://github.com/Parasmahzn/Tangy",
     },
     {
-        name: "Trip Guide",
+        name: "Face Detection",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
             {
-                name: "nextjs",
+                name: ".net",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "winform",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "machine learning",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: facedetection,
+        source_code_link: "https://github.com/Parasmahzn/FaceDetection",
     },
 ];
 
