@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { suggestionMessages } from "@constants/navbar";
 import emailjs from "@emailjs/browser";
 
 // import { EarthCanvas } from "@components/canvas/Earth";
@@ -22,42 +23,59 @@ const Contact = () => {
         setForm({ ...form, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const isValidEmail = (email) => {
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        return emailRegex.test(email);
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        emailjs
-            .send(
-                "service_r0jcplm",
-                "template_1t76uxq",
+        if (!isValidEmail(form.email)) {
+            setLoading(false);
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/contact/',
                 {
-                    form_name: form.name,
-                    to_name: "Liron",
-                    from_email: form.email,
-                    to_email: "contact@mail.com",
-                    message: form.message,
-                },
-                "Jqq9AvwIuSjoMiA5c"
-            )
-            .then(
-                () => {
-                    setLoading(false);
-                    alert("Thank you. I will get back to you as soon as possible.");
+                    method: 'POST',
+                    body: JSON.stringify({
+                        name: form.name,
+                        email: form.email,
+                        message: form.message,
+                    })
+                })
 
-                    setForm({
-                        name: "",
-                        email: "",
-                        message: "",
-                    });
-                },
-                (error) => {
-                    setLoading(false);
+            if (response.ok) {
+                setLoading(false);
+                alert("Thank you. I will get back to you as soon as possible.");
+                setForm({
+                    name: "",
+                    email: "",
+                    message: "",
+                });
+            }
+            else if (response.status === 400) {
+                setLoading(false);
+                const randomIndex = Math.floor(Math.random() * suggestionMessages.length);
+                const suggestionMessage = suggestionMessages[randomIndex];
+                alert(suggestionMessage);
+            }
+            else
+                throw new Error(`Request failed with status ${response.status}`)
 
-                    console.log(error);
-                    alert("Something went wrong.");
-                }
-            );
-    };
+        } catch (error) {
+            setLoading(false);
+            console.log(error);
+            alert("Something went wrong.");
+        }
+        finally {
+            setLoading(false);
+        }
+    }
 
     return (
         <div

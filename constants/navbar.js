@@ -268,4 +268,20 @@ const projects = [
     },
 ];
 
+const suggestionMessages = [
+    "Thank you for reaching out. I have already received your message and will get back to you soon.",
+    "I appreciate your interest, but it seems I have already received a message from this email address. I'll review your previous message and respond accordingly.",
+    "It appears that I have already received a message from this email address. I'll make sure to review your previous message and provide a response as soon as possible.",
+    "Your email has already been posted in my database. I will review your previous message and respond to it shortly.",
+    "Thank you for contacting me again. I already have a record of your previous message and will attend to it promptly.",
+    "I see that you have previously contacted me. I will review your previous message and respond to it at the earliest opportunity.",
+    "I have already received a message from this email address. Rest assured, I will carefully review your previous message and provide a response soon.",
+    "Your email address is already in my records. Let me go through your previous message and provide you with a thoughtful response.",
+    "Thank you for getting in touch once again. I have your previous message on file and will address it in a timely manner.",
+    "It seems that you have already contacted me before. I will review your previous message and reply as soon as possible."
+];
+
+
 export { navLinks, services, technologies, experiences, testimonials, projects };
+
+export { suggestionMessages };
