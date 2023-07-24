@@ -6,6 +6,7 @@ import Contact from './contact/page';
 import About from './about/page'
 import Experience from './experience/page';
 import Works from './works/page';
+import Feedbacks from './feedback/page';
 
 export const metadata = {
     title: "Paras Maharjan",
@@ -25,7 +26,7 @@ const RootLayout = ({ children }) => {
                     <Experience />
                     {/* <Tech /> */}
                     <Works />
-                    {/* <Feedbacks /> */}
+                    <Feedbacks />
                     <div className="relative z-0">
                         <Contact />
                         <StarsCanvas />

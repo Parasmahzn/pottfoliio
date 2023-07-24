@@ -17,7 +17,7 @@ const Home = () => (
                 </h1>
                 <p className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-100`}>
                     I develop attractive, user <br className="sm:block hidden" />
-                    interfaces and custom web applications <br className="sm:block hidden" />that help your business grow.
+                    interfaces and custom web applications that <br className="sm:block hidden" /> help your business grow.
                 </p>
             </div>
         </div>

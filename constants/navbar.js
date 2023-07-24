@@ -182,7 +182,7 @@ const testimonials = [
         name: "Sara Lee",
         designation: "CFO",
         company: "Acme Co",
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
+        image: "https://randomuser.me/api/portraits/women/2.jpg",
     },
     {
         testimonial:
